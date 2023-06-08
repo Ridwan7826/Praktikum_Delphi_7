@@ -1,0 +1,42 @@
+#------------------------------------------------------------------------------
+VERSION = BWS.01
+#------------------------------------------------------------------------------
+!ifndef ROOT
+ROOT = $(MAKEDIR)\..
+!endif
+#------------------------------------------------------------------------------
+MAKE = $(ROOT)\bin\make.exe -$(MAKEFLAGS) -f$**
+DCC = $(ROOT)\bin\dcc32.exe $**
+BRCC = $(ROOT)\bin\brcc32.exe $**
+#------------------------------------------------------------------------------
+PROJECTS = Project6.exe Project1.exe Project8.exe Project3.exe Project4.exe \
+  Project5.exe Project7.exe Project8.exe
+#------------------------------------------------------------------------------
+default: $(PROJECTS)
+#------------------------------------------------------------------------------
+
+Project6.exe: Project6.dpr
+  $(DCC)
+
+Project1.exe: ..\Program Files (x86)\Borland\Delphi7\Projects\Project1.dpr
+  $(DCC)
+
+Project8.exe: Project8.dpr
+  $(DCC)
+
+Project3.exe: ..\Program Files (x86)\Borland\Delphi7\Projects\Project3.dpr
+  $(DCC)
+
+Project4.exe: ..\Program Files (x86)\Borland\Delphi7\Projects\Project4.dpr
+  $(DCC)
+
+Project5.exe: ..\Program Files (x86)\Borland\Delphi7\Projects\Project5.dpr
+  $(DCC)
+
+Project7.exe: ..\Program Files (x86)\Borland\Delphi7\Projects\Project7.dpr
+  $(DCC)
+
+Project8.exe: Project8.dpr
+  $(DCC)
+
+
